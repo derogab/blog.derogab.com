@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>derogab.com</title>
+  <title>blog.derogab.com</title>
   
   <subtitle>I write about my technological experiments</subtitle>
   <link href="/atom.xml" rel="self"/>
