@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>derogab.com</title>
+  
+  <subtitle>I write about my technological experiments</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://derogab.com/"/>
+  <updated>2018-05-25T18:17:24.497Z</updated>
+  <id>http://derogab.com/</id>
+  
+  <author>
+    <name>derogab</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Instagram-doesn-t-encrypt-stories</title>
+    <link href="http://derogab.com/2017/05/22/Instagram-doesn-t-encrypt-stories/"/>
+    <id>http://derogab.com/2017/05/22/Instagram-doesn-t-encrypt-stories/</id>
+    <published>2017-05-22T21:12:47.000Z</published>
+    <updated>2018-05-25T18:17:24.497Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Preamble"><a href="#Preamble" class="headerlink" title="Preamble"></a>Preamble</h2><p>This article was copied from an old blog I had opened with a friend. It does not fully reflect the style and content of my blog, but I did not want this work to be lost.</p><h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>After the rise of Snapchat, the <em>stories</em> also invaded the most used social in the world: Facebook (and Messenger), Instagram, and WhatsApp.</p><p>The main reason for the success of stories is that content disappears after just 24 hours.</p><p>But is not so.</p><p><strong>Nothing disappears from the internet.</strong> Or not when we believe it.</p><p>In particular I analyzed Instagram and I found out that..</p><h2 id="Instagram-is-not-safe"><a href="#Instagram-is-not-safe" class="headerlink" title="Instagram is not safe"></a>Instagram is not safe</h2><p>Unfortunately, Instagram stories are not downloaded to your smartphones using an encrypted connection.<br>In this way <strong>anyone can have access to your stories, even if you have a private profile</strong>.</p><p>Any man-in-the-middle, connected to the same network as your friend (for example, in university, in a bar or any other public wifi), could intercept your stories as soon as he opens Instagram.</p><p>As a result, <strong>this person could do whatever he wants with your content</strong>. He can save them, publish them or else.</p><h2 id="Seeing-is-believing"><a href="#Seeing-is-believing" class="headerlink" title="Seeing is believing"></a>Seeing is believing</h2><p>To analyze this fact I did a <em>sniffing</em> with <a href="https://www.wireshark.org/" target="_blank" rel="noopener">Wireshark</a>.</p><p>see <a href="https://en.wikipedia.org/wiki/Packet_analyzer" target="_blank" rel="noopener">Wikipedia</a></p><blockquote><p>A packet analyzer (also known as a network analyzer, protocol analyzer or packet sniffer—or, for particular types of networks, an Ethernet sniffer or wireless sniffer) is a computer program or piece of computer hardware that can intercept and log traffic that passes over a digital network or part of a network.</p></blockquote><p>To intercept my friends’ stories I connected the computer and the smartphone to the same wifi network. Then I opened Wireshark.</p><p><em>I saw all my network data that was not encrypted.</em></p><p>At this time I opened Instagram and clicked on my friend’s story.</p><p><img src="/images/posts/Instagram-doesn-t-encrypt-stories/img00_ok.jpg" alt="alt text" title="Image in the stories"></p><p>After that I searched for the <a href="https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol" target="_blank" rel="noopener">HTTP</a> requests that WireShark had sniffed from the net and <strong>I found the resources corresponding to the stories I had looked at on the smartphone!</strong></p><p><img src="/images/posts/Instagram-doesn-t-encrypt-stories/img01_ok.png" alt="alt text" title="Sniffing"></p><p>For the most experienced..<br>The data obtained with WireShark containing the stories was like this<br>GET /codes_numbers.jpg HTTP/1.1 for images<br>GET /codes_numbers.mp4 HTTP/1.1 for videos</p><p>So I could find the <em>full request URI</em> containing the direct link to the contents.</p><p><img src="/images/posts/Instagram-doesn-t-encrypt-stories/img02_ok.png" alt="alt text" title="Content Analysis"><br><img src="/images/posts/Instagram-doesn-t-encrypt-stories/img03_ok.png" alt="alt text" title="Content Image"></p><h2 id="Self-destruction"><a href="#Self-destruction" class="headerlink" title="Self-destruction"></a>Self-destruction</h2><p>In the following days I kept the contents under control and I could verify that the images and videos were deleted only after 3 days.</p><h2 id="Alternative-Stories’-Apps"><a href="#Alternative-Stories’-Apps" class="headerlink" title="Alternative Stories’ Apps"></a>Alternative Stories’ Apps</h2><p>The procedure is not applicable with Snapchat, Facebook and Whatsapp because they use an encrypted protocol: <a href="https://en.wikipedia.org/wiki/Transport_Layer_Security" target="_blank" rel="noopener">TLS</a>.</p><h2 id="Video-demo"><a href="#Video-demo" class="headerlink" title="Video demo"></a>Video demo</h2><iframe width="100%" height="355" src="https://www.youtube-nocookie.com/embed/jHUwCL9oRbQ?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe><h2 id="Disclaimer"><a href="#Disclaimer" class="headerlink" title="Disclaimer"></a>Disclaimer</h2><p>Article for information purposes. I take no responsibility for misuse of the information obtained from this article.</p><h2 id="Update"><a href="#Update" class="headerlink" title="Update"></a>Update</h2><p>After some updates of the app it seems that <strong>this bug has been fixed</strong>.</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;Preamble&quot;&gt;&lt;a href=&quot;#Preamble&quot; class=&quot;headerlink&quot; title=&quot;Preamble&quot;&gt;&lt;/a&gt;Preamble&lt;/h2&gt;&lt;p&gt;This article was copied from an old blog I had
+      
+    
+    </summary>
+    
+    
+      <category term="instagram" scheme="http://derogab.com/tags/instagram/"/>
+    
+      <category term="ssl" scheme="http://derogab.com/tags/ssl/"/>
+    
+      <category term="tls" scheme="http://derogab.com/tags/tls/"/>
+    
+  </entry>
+  
+</feed>
