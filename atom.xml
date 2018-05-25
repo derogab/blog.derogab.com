@@ -3,11 +3,11 @@
   <title>derogab.com</title>
   
   <subtitle>I write about my technological experiments</subtitle>
-  <link href="/blog/atom.xml" rel="self"/>
+  <link href="/atom.xml" rel="self"/>
   
-  <link href="http://derogab.com/blog/"/>
+  <link href="http://blog.derogab.com/"/>
   <updated>2018-05-25T18:17:24.497Z</updated>
-  <id>http://derogab.com/blog/</id>
+  <id>http://blog.derogab.com/</id>
   
   <author>
     <name>derogab</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>Instagram-doesn-t-encrypt-stories</title>
-    <link href="http://derogab.com/blog/2017/05/22/Instagram-doesn-t-encrypt-stories/"/>
-    <id>http://derogab.com/blog/2017/05/22/Instagram-doesn-t-encrypt-stories/</id>
+    <link href="http://blog.derogab.com/2017/05/22/Instagram-doesn-t-encrypt-stories/"/>
+    <id>http://blog.derogab.com/2017/05/22/Instagram-doesn-t-encrypt-stories/</id>
     <published>2017-05-22T21:12:47.000Z</published>
     <updated>2018-05-25T18:17:24.497Z</updated>
     
@@ -35,11 +35,11 @@
     </summary>
     
     
-      <category term="instagram" scheme="http://derogab.com/blog/tags/instagram/"/>
+      <category term="instagram" scheme="http://blog.derogab.com/tags/instagram/"/>
     
-      <category term="ssl" scheme="http://derogab.com/blog/tags/ssl/"/>
+      <category term="ssl" scheme="http://blog.derogab.com/tags/ssl/"/>
     
-      <category term="tls" scheme="http://derogab.com/blog/tags/tls/"/>
+      <category term="tls" scheme="http://blog.derogab.com/tags/tls/"/>
     
   </entry>
   
